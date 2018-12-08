@@ -9,6 +9,8 @@ import java.util.*;
  * and including debug and bits read/written information
  * 
  * @author Owen Astrachan
+ * Achilles Dabrowski - ajd66
+ * Ryan Weeratunga - rkw14
  */
 
 public class HuffProcessor {
@@ -104,6 +106,8 @@ public class HuffProcessor {
 		
 		if(root.myLeft == null && root.myRight == null) {
 			encodings[root.myValue] = str;
+			if (myDebugLevel >= DEBUG_HIGH)
+				System.out.printf("encoding for %d is %s\n",root.myValue, str);
 			return;
 		}
 		
